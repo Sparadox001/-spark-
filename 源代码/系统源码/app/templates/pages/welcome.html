@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends 'layout2.html' %}
+
+
+{% block title %}欢迎页{% endblock %}
+
+{% block head %}
+<!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/SmileySans.css') }}"> -->
+{% endblock %}
+
+
+
+
+{% block divchart %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-cloud icon"></i>词云图1</div>
+    <div class="layui-card-body">
+        <img src="data:image/png;base64,{{ plt1 }}" alt="热力图" style="width: 100%;">
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block divanalyse %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-cloud icon"></i>词云图2</div>
+    <div class="layui-card-body">
+        <img src="data:image/png;base64,{{ plt2 }}" alt="热力图" style="width: 100%;">
+    </div>
+</div>
+{% endblock %}
+
+{% block heng %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-send icon"></i>分析</div>
+    <div class="layui-card-body">
+        <p>词云图1是对所有剧集进行描述的词云展示，可以看出主角Jon和龙妈Daenerys的名字很显眼，其次就是军师小恶魔Tyrion和无面者Arya。<br>
+            这说明在这部剧中，他们都是核心人物。<br>
+            词云图2是所有人物台词的词频展示，最多的台词也是指向了龙妈和Jon，Tyrion和Arya等人。<br>
+            足以看出这些人物在剧中有着举足轻重的作用。<br>
+           </p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block head %}
+{{ script | safe }}
+{% endblock %}
+
+
+
+{% block divchart %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-line-chart icon"></i>折线图</div>
+    <div class="layui-card-body">
+        <div id="chart1" style="width: 100%;">
+            {{ chart2_html | safe }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block divanalyse %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-send icon"></i>分析</div>
+    <div class="layui-card-body">
+        <p>
+            从折线图中看出，前7季的剧集的参与评价的人数都在稳步上升，而到了第8季时突然上升到了最高点，根据网上公开信息显示，《权力的游戏》前7季都是逐年放送的，而第8季时隔两年才放送，同时第8季也是整个剧集系列的最后一季，因此热度突然变得那么高也有一定的原因。<br><br>
+     
+        </p>
+    </div>
+</div>
+{% endblock %}

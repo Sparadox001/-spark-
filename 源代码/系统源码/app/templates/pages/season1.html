@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block head %}
+{{ script | safe }}
+{% endblock %}
+
+
+
+{% block divchart %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-area-chart icon"></i>面积图</div>
+    <div class="layui-card-body">
+        <div id="chart1" style="width: 100%;">
+            {{ chart1_html | safe }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block divanalyse %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-send icon"></i>分析</div>
+    <div class="layui-card-body">
+        <p>
+            由面积图反应的信息可知，随着时间推移,图形面积越来越大，观看该剧的人数越来越多，说明了该剧越来越火<br><br>
+        </p>
+    </div>
+</div>
+{% endblock %}

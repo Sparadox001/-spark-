@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block head %}
+{{ script | safe }}
+{% endblock %}
+
+
+
+{% block divchart %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-bar-chart icon"></i>3D柱状图</div>
+    <div class="layui-card-body">
+        <div id="chart1" style="width: 100%;">
+            {{ time1 | safe }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block divanalyse %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-send icon"></i>分析</div>
+    <div class="layui-card-body">
+        <p>
+            通过3D的柱状图，更加立体感受出，随着时间推移,《权力的游戏》越发火爆<br><br>
+            
+        </p>
+    </div>
+</div>
+{% endblock %}

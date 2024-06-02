@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block head %}
+{{ script | safe }}
+{% endblock %}
+
+
+
+{% block divchart %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-bar-chart icon"></i>柱状图</div>
+    <div class="layui-card-body">
+        <div id="chart1" style="width: 100%;">
+            {{ direct21 | safe }}
+        </div>
+    </div>
+</div>
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-pie-chart icon"></i>饼图</div>
+    <div class="layui-card-body">
+        <div id="chart2" style="width: 100%;">
+            {{ direct22 | safe }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block divanalyse %}
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-send icon"></i>分析</div>
+    <div class="layui-card-body">
+        <p>
+            由图表可知，剧本本身是没有问题的，各个作者的剧集的得分都差不多（可以看到最高分就是原著作者George R.R Martin，高达9.2分）<br><br>
+        </p>   
+    </div>
+</div>
+
+
+<div class="layui-card">
+    <div class="layui-card-header"><i class="fa fa-send icon"></i>分析</div>
+    <div class="layui-card-body">
+        <p>  
+            可以看出，大部分剧集是由David Benioff&D.BWeiss写的，这两位也是《权力的游戏》的总编剧。<br><br>
+        </p>   
+    </div>
+</div>
+
+{% endblock %}
